@@ -1,0 +1,599 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Base Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Container Layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styling */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Header Flex Layout */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e0f7e0;
+}
+
+/* Cart Icon */
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+/* Search Bar Container */
+.search-container {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 80px;
+    background: #f9f9f9;
+    padding: 10px 0;
+    z-index: 99;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-bar:focus {
+    border-color: #4CAF50;
+}
+
+/* Hero Section Background */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin: 2rem 0;
+    color: #4CAF50;
+}
+
+/* Menu Grid Layout */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Menu Item Card */
+.menu-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.menu-item-content {
+    padding: 1rem;
+}
+
+.menu-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+.add-to-cart.added {
+    background-color: #ff9800;
+}
+
+/* Cart Section Box */
+.cart-section {
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.cart-items {
+    margin-bottom: 1.5rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-details h4 {
+    margin-bottom: 0.3rem;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    background-color: #f0f0f0;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.quantity-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #45a049;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Base Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background: white;
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Modal Tabs */
+.modal-tabs {
+    display: flex;
+    background: #4CAF50;
+}
+
+.modal-tab {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-tab.active {
+    background: rgba(255,255,255,0.2);
+    font-weight: bold;
+}
+
+.modal-tab:not(.active):hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Modal Form Container */
+.modal-form-container {
+    padding: 2rem;
+}
+
+.modal-form {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-form.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.modal-header p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+    outline: none;
+}
+
+/* Signup Benefits Box */
+.signup-benefits {
+    background: #f8fff8;
+    border-left: 4px solid #4CAF50;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.signup-benefits h4 {
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+}
+
+.signup-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.signup-benefits li {
+    padding: 0.3rem 0;
+    color: #666;
+}
+
+.signup-benefits li:before {
+    content: "✓ ";
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Order Confirmation Details */
+.order-confirmation {
+    text-align: center;
+    padding: 2rem;
+}
+
+.confirmation-icon {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.confirmation-title {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.confirmation-details {
+    background: #f8fff8;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.confirmation-details p {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirmation-details .label {
+    font-weight: bold;
+    color: #333;
+}
+
+.confirmation-details .value {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.delivery-time {
+    background: #fff8e1;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.order-number {
+    background: #e3f2fd;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-weight: bold;
+    color: #2196f3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .cart-item-controls {
+        align-self: flex-end;
+    }
+}
